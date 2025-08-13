@@ -1,0 +1,15 @@
+what is a div ??
+why do we use divs ??
+
+i found a great explanation for this in reddit
+Consider a box of chocolates, the box is div, chocolates are elements.
+Now keeping 1 chocolate outside is fine, if you want to move it up down or wherever you can,
+but if you have two chocolates outside then you have to move each individually even if its in
+the same direction. But if you put them in a box (div) then you just have to move the box around.
+Now for section, imagine having all the ferrero rochers in one big box (section) and then black rochers
+can go in black rocher div in the big box, white can go in white rochers div and so on. Then you have all
+the nutty chocolates in a big box (section) where almond chocolates can go in almond div in big box and so on.
+
+what is a margin and what is the width?
+what is a flex_box ?
+what is the innertext ?

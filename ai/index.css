@@ -1,0 +1,27 @@
+.input_1{
+	border-radius: 10px;
+}
+
+.enter_button{
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 8px;
+	font-weight: bold;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+.enter_button:hover{
+	background-color: white;
+	color: black;
+	transition: color 0.4s, background-color 0.4s;
+}
+
+.middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
