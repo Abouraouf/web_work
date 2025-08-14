@@ -32,5 +32,22 @@ function storage() {
 
 delete_button.addEventListener("click", () =>
 	{
-		
-	})
+		const input = document.getElementById("input");
+		const value = input.value;
+	
+
+		const index = array.indexOf(value);
+		if (index > -1) {
+			array.splice(index, 1);
+		}
+	
+		const items = list.querySelectorAll("li");
+		items.forEach(li => {
+			if (li.textContent === value) li.remove();
+		});
+
+		localStorage.setItem("list", JSON.stringify(array));
+		input.value = "";
+	});
+
+	
