@@ -1,53 +1,51 @@
-const list = document.getElementById("list")
 const add_button = document.getElementById("add")
 const delete_button = document.getElementById("delete")
+const clear_button = document.getElementById("clear")
+const list = document.getElementById("list")
+let array = JSON.parse(localStorage.getItem("array")) || []
 
-let array = JSON.parse(localStorage.getItem("list")) || [];
-storage()
+const prev = window.localStorage
 
-add_button.addEventListener("click", ()=>
-{
-	input = document.getElementById("input")
-	li = document.createElement("li");
-	if (input.value)
-		{
-			li.textContent = input.value;
-			list.appendChild(li);
-			array = JSON.parse(localStorage.getItem("list")) || [];
-			array.push(input.value);
-			localStorage.setItem("list", JSON.stringify(array));
-			console.log(array)
-			input.value = null;
-		}
-	});
-
-
-function storage() {
-	array.forEach(item => {
-		const li = document.createElement("li");
-		li.textContent = item;
-		list.appendChild(li);
-	});
+if (prev){
+	const arr = JSON.parse(prev.array)
+	console.log(arr)
+	arr.map((e) => {
+		const elem = document.createElement("li")
+		elem.textContent = e
+		list.appendChild(elem)
+	})
 }
 
-delete_button.addEventListener("click", () =>
+add_button.addEventListener("click", () =>
 	{
-		const input = document.getElementById("input");
-		const value = input.value;
-	
+		console.log(array);
+		const input = document.getElementById("input")
+		const li = document.createElement("li")
+		if (input.value)
+			{
+				array.push(input.value)
+				localStorage.setItem("array", JSON.stringify(array));
+				li.textContent = input.value;
+				list.appendChild(li);
+				input.value = "";
+			}
+	})
 
-		const index = array.indexOf(value);
-		if (index > -1) {
-			array.splice(index, 1);
-		}
-	
-		const items = list.querySelectorAll("li");
-		items.forEach(li => {
-			if (li.textContent === value) li.remove();
-		});
-
-		localStorage.setItem("list", JSON.stringify(array));
-		input.value = "";
+delete_button.addEventListener("click", () =>{
+	const items = document.querySelectorAll("ul li");
+	array = array.filter(item => item !== input.value)
+	localStorage.setItem("array", JSON.stringify(array));
+	items.forEach(li => {
+    	if (li.textContent == input.value)
+			li.remove()
 	});
+})
 
-	
+clear_button.addEventListener("click", () => {
+	const items = document.querySelectorAll("ul li");
+	items.forEach(li => {
+			li.remove()
+	});
+	array = [];
+	localStorage.setItem("array", JSON.stringify(array));
+})

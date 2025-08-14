@@ -28,6 +28,19 @@
 	transition: color 0.4s , background-color 0.4s;
 }
 
+.clear_button{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border: none;
+	background-color: black;
+	color: white;
+	border-radius: 30px;
+	font-weight: bold;
+	transition: color 0.4s , background-color 0.4s;
+}
+
 .delete_button{
 	padding-left: 30px;
 	padding-right: 30px;
