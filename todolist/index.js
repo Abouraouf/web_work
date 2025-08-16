@@ -39,6 +39,7 @@ delete_button.addEventListener("click", () =>{
     	if (li.textContent == input.value)
 			li.remove()
 	});
+	input.value = "";
 })
 
 clear_button.addEventListener("click", () => {
@@ -46,6 +47,7 @@ clear_button.addEventListener("click", () => {
 	items.forEach(li => {
 			li.remove()
 	});
+	input.value = "";
 	array = [];
 	localStorage.setItem("array", JSON.stringify(array));
 })
