@@ -13,8 +13,9 @@ buttons.forEach(button =>
 					input.value = "error"
 				}
 			else if (value == "C")
-				input.value = ""
+				input.value = null
 			else 
 				input.value += value
+			console.log(input.value)
 		});
 	});
