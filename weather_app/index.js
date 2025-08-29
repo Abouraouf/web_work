@@ -16,20 +16,21 @@ function fetch_data()
 		.then(mahdi => mahdi.json())
 		.then(data => {
 			if (data.cod && data.cod === "404"){ //
+				city_out.innerText = "Wrong_input"
 				return; // do something later
 			}
 			stored_data = data;
 			const city = stored_data.name;
 			const temp = stored_data.main.temp - 273.15;
 			const weather = stored_data.weather[0].description;
-
-			
-   	 		temp_out.innerText = temp.toFixed(1);
-   	 		weather_out.innerText = weather;
+weather_out.innerText = weather;
 			city_out.innerText = city
-			console.log(`City: ${city}`);
-    		console.log(`Temp: ${temp.toFixed(1)}°C`);
-    		console.log(`Weather: ${weather}`);
+			
+   	 		temp_out.innerText = temp.toFixed(1) + " C";
+   	 		
+			// console.log(`City: ${city}`);
+    		// console.log(`Temp: ${temp.toFixed(1)}°C`);
+    		// console.log(`Weather: ${weather}`);
 		})
 		.catch(error => console.log("Error:", err));
 }
