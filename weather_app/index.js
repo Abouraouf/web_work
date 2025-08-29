@@ -17,13 +17,16 @@ function fetch_data()
 		.then(data => {
 			if (data.cod && data.cod === "404"){ //
 				city_out.innerText = "Wrong_input"
+				weather_out.innerText = "";
+				temp_out.innerText = "";
 				return; // do something later
 			}
 			stored_data = data;
 			const city = stored_data.name;
 			const temp = stored_data.main.temp - 273.15;
 			const weather = stored_data.weather[0].description;
-weather_out.innerText = weather;
+			
+			weather_out.innerText = weather;
 			city_out.innerText = city
 			
    	 		temp_out.innerText = temp.toFixed(1) + " C";

@@ -1,18 +1,24 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	overflow-x: hidden;
-  }
+	background-image: linear-gradient(to right, #aac1c8, #4c889a); /* Left to right gradient */
 
+}
+
+.style{
+	align-self: flex-start;
+	height: 100px;
+	width: 100px;
+}
 .container_all{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
 	height: 100vh;
-	background-image: linear-gradient(to right, #aac1c8, #4c889a); /* Left to right gradient */
 }
 
 .title{
@@ -58,7 +64,7 @@ html, body {
 }
 
 .container_in input::placeholder{
-	color: black;
+	color : black;
 	font-family: 'Open Sans', 'Roboto', sans-serif;
 	font-size: 19px;
 	/* color: transarent; */
