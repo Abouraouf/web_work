@@ -1,10 +1,70 @@
-.container{
+.container_all{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 100vh;
+}
+
+.title{
+	font-family: 'Open Sans', 'Roboto', sans-serif;
+	font-size: 50px;
+	margin: 10px;
+}
+
+.container_in{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 100vh;
+	height: 60vh;
+	width: 40%;
+	background-color: rgba(56,174,210,255);
+	margin-left: 30px;
+	border-radius: 10px;
+}
+
+.container_out{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 60vh;
+	width: 40%;
+	background-color: rgba(56,174,210,255);
+	margin-left: 30px;
+	border-radius: 10px;
+}
+
+.container_in input{
+	background-color: rgba(56,174,210,255);
+	border-radius: 10px;
+	width: 80%;
+	padding: 10px;
+	font-family: serif;
+	border: solid;
+	border-color:dimgrey;
+	text-align: center;
+	font-size: 19px;
+}
+
+.container_in input::placeholder{
+	color: black;
+	font-family: 'Open Sans', 'Roboto', sans-serif;
+	font-size: 19px;
+	/* color: transarent; */
 }
 .enter_button{
-	
+	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 10px;
+	background-color:  rgba(56,174,210,255);
+	color: black;
+	border-radius: 15px;
+	border: none;
+	font-weight: bold;
+	cursor: pointer;
+	font-size: 20px;
 }
