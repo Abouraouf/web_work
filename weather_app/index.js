@@ -10,7 +10,7 @@ const city_out = document.getElementById("city");
 
 function fetch_data()
 {
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&appid=92880c87a47e26070ee61fab595ada1c`
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${place.value}&appid=92880c87a47e26070ee61fab595ada1c` //localhost:5656/weather
 	let stored_data;
 	fetch(url)
 		.then(mahdi => mahdi.json())

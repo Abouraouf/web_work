@@ -130,3 +130,46 @@ body{
 	background-color: #061826;
 	border-radius: 10px;
 }
+
+
+
+
+
+
+/* for sign in */
+
+.container_sign{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #061826;
+	height: 100vh;
+	width: 100%;
+}
+
+.middle_sign{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60%;
+	width: 70%;
+}
+
+.middle_sign_in{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 110%;
+	width: 30%;
+	background-color: #2B505C ;
+}
+
+.img_style{
+	height: 110%;
+	width: 30%;
+	background-color:aliceblue;
+}
+
+
+/* style the input sign in*/
