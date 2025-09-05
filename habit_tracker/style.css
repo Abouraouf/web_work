@@ -126,7 +126,7 @@ body{
 .bucket{
 	margin-left: 30px;
 	height: 80%;
-	width: 37%;
+	width: 33%;
 	background-color: #061826;
 	border-radius: 10px;
 }
@@ -151,25 +151,127 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 60%;
+	height: 45%;
 	width: 70%;
+
 }
 
 .middle_sign_in{
 	display: flex;
-	align-items: center;
+	align-items: start;
 	justify-content: center;
 	flex-direction: column;
 	height: 110%;
 	width: 30%;
 	background-color: #2B505C ;
+	border-top-right-radius: 14px;
+	border-bottom-right-radius: 14px;
 }
 
 .img_style{
 	height: 110%;
 	width: 30%;
-	background-color:aliceblue;
+	background-color: #2B505C;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+}
+
+.middle_sign_in h1{
+	margin-bottom: 20px;
+	color: aliceblue;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.middle_sign_in input,
+.Sign_in
+{
+    width: 80%;                
+    padding: 10px;           
+    border-radius: 5px;
+    margin: 3px;
+    margin-bottom: 10px;
+    border: none;
+    text-align: center;
+    background-color: #607D7E;
+    font-size: 16px;          
+}
+
+.middle_sign_in input::placeholder{
+	color: #061826;
+}
+
+input:focus::placeholder {
+	color: transparent; 
+ }
+
+input:focus{
+	outline: none;
+	color: #061826;
 }
 
 
-/* style the input sign in*/
+  .first_last_names{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 81%;                 
+}
+
+.email_pass
+{
+	padding: 72px;
+}
+
+.Sign_in{
+	padding-top: 7px;
+	padding-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.4s, color 0.4s;
+}
+
+.create{
+	height: 300px;
+	width: 355px;
+}
+
+.create h1{
+	font-size: 40px;
+	margin-top: 60px;
+}
+
+.print{
+	height: 750px;
+}
+.print p{
+	margin-bottom: 30px;
+}
+
+
+.Sign_in:hover{
+	color: white;
+	background-color: #4A6364;
+}
+
+
+.img_style {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 110%;
+	width: 30%;
+	background-color: #2B505C;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+	overflow: hidden; /* Add this line to clip the image's corners */
+}
+
+/* Add this new rule to style the image inside the div */
+.img_style img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* This makes the image cover the div without stretching */
+	border-radius: 20px;
+}
+
